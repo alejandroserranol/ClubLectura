@@ -12,8 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::unprepared(file_get_contents('database/grupo_soloInserts.sql'));
+        //DB::unprepared(file_get_contents('database/grupo_soloInserts.sql'));
 
-        DB::unprepared(file_get_contents('database/libro_soloInserts.sql'));
+        //DB::unprepared(file_get_contents('database/libro_soloInserts.sql'));
+
+        DB::unprepared(file_get_contents('database/miembro_soloInserts.sql'));
+
+        DB::unprepared(file_get_contents('database/pertenece_soloInserts.sql'));
     }
 }

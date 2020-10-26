@@ -20,6 +20,7 @@ class CreateLibroTable extends Migration
             $table->string('tematica', 45)->nullable($value = true);
             $table->string('editorial', 45)->nullable($value = true);
             $table->date('publicacion')->nullable($value = true);
+            $table->timestamps();
         });
     }
 

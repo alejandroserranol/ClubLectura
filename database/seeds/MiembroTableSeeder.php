@@ -16,7 +16,15 @@ class MiembroTableSeeder extends Seeder
         //crea 100 miembros falsos
         for($i=0; $i<100; $i++){
             App\miembro::create(([
-                'dni'=>$faker->ean8
+                'dni'=>$faker->unique(true)->ean8,
+                'nombre'=>$faker->name,
+                'apellido'=>$faker->lastname,
+                'email'=>$faker->unique(true)->email,
+                'telefono'=>$faker->unique(true)->e164PhoneNumber,
+                'direccion'=>$faker->address,
+                'situacion_actual'=>1,
+                'fecha_alta'=>$faker->time($format = 'Y-m-d', $max = 'now'),
+                'fecha_baja'=>$faker->unique(true)->optional(0)->word
             ])
             );
         }

@@ -17,6 +17,7 @@ class CreateGrupoTable extends Migration
             $table->string('genero', 15)->primary();
             $table->string('dia', 11)->nullable($value = true);
             $table->string('aula', 15)->nullable($value = true);
+            $table->timestamps();
         });
     }
 

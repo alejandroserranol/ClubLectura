@@ -18,7 +18,8 @@ class CreateDebateTable extends Migration
             $table->string('curso', 11)->nullable($value = false);
             $table->string('genero', 15)->nullable($value = false);           
             $table->string('libro', 45)->nullable($value = true);
-            $table->date('fecha_baja')->nullable($value = true);
+            $table->date('fecha')->nullable($value = true);
+            $table->timestamps();
 
             $table->foreign('genero')->references('genero')->on('grupo')->onDelete('cascade');        
             $table->foreign('libro')->references('isbn')->on('libro')->onDelete('cascade');

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        DB::unprepared(file_get_contents('database/grupo_soloInserts.sql'));
+
+        DB::unprepared(file_get_contents('database/libro_soloInserts.sql'));
     }
 }

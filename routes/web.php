@@ -14,5 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('vistainicial');
+    return view('ventanaprincipal');
 });
+
+Route::get('dramatico', 'VentanaPrincipalController@carga_dramatico');
